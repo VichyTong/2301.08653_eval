@@ -1,0 +1,1 @@
+The program does not have a bug. It is a correct implementation of the Sieve of Eratosthenes algorithm for finding prime numbers up to a given maximum value.

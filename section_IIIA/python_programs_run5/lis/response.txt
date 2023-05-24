@@ -1,0 +1,19 @@
+It is difficult to determine if the program has a bug without knowing the intended functionality and expected output. However, one potential issue is that the "ends" dictionary is not initialized with a value for the key 1, which could cause an error if the first element in the array is not the smallest. To fix this, the "ends" dictionary should be initialized with a value for the key 1:
+
+```
+def lis(arr):
+    ends = {1: 0} # initialize with a value for key 1
+    longest = 1
+
+    for i, val in enumerate(arr):
+
+        prefix_lengths = [j for j in range(1, longest + 1) if arr[ends[j]] < val]
+
+        length = max(prefix_lengths) if prefix_lengths else 0
+
+        if length == longest or val < arr[ends[length + 1]]:
+            ends[length + 1] = i
+            longest = length + 1
+
+    return longest
+```

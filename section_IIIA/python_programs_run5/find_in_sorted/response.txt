@@ -1,0 +1,1 @@
+There is no obvious bug in this program. However, it is missing a case where x is equal to the last element in the array. To fix this, change the line "if start == end:" to "if start >= end:". This will ensure that the function returns -1 if the element is not found in the array.

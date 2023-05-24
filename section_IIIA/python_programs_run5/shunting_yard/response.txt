@@ -1,0 +1,29 @@
+It is difficult to determine if this program has a bug without more context about what it is supposed to do and what input it is expecting. However, one potential issue is that if the input tokens contain a token that is not an integer or one of the specified operators (+, -, *, /), the program will throw a KeyError when trying to access its precedence in the precedence dictionary.
+
+To fix this, you could add a check to make sure the token is a valid operator before accessing its precedence in the dictionary. For example:
+
+def shunting_yard(tokens):
+    precedence = {
+        '+': 1,
+        '-': 1,
+        '*': 2,
+        '/': 2
+    }
+
+    rpntokens = []
+    opstack = []
+    for token in tokens:
+        if isinstance(token, int):
+            rpntokens.append(token)
+        elif token in precedence:
+            while opstack and precedence[token] <= precedence[opstack[-1]]:
+                rpntokens.append(opstack.pop())
+            opstack.append(token)
+        else:
+            # handle invalid token here
+            print("Invalid token:", token)
+
+    while opstack:
+        rpntokens.append(opstack.pop())
+
+    return rpntokens

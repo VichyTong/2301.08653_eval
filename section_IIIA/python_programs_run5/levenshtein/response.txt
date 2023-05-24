@@ -1,0 +1,3 @@
+There is no obvious bug in this program. However, it is always possible that there may be edge cases or unexpected inputs that could cause issues. It is recommended to thoroughly test the function with various inputs to ensure its correctness.
+
+If any issues are found, they can be fixed by modifying the code accordingly.

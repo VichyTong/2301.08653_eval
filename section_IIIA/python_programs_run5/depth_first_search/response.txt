@@ -1,0 +1,19 @@
+There is no obvious bug in this program. However, it is missing some important details such as the definition of the Node class and its successors attribute. Without this information, it is difficult to determine if the program will work as intended.
+
+Assuming that the Node class and its successors attribute are defined correctly, one possible improvement to the program is to add the startnode to the nodesvisited set before calling the search_from function. This ensures that the startnode is not visited again during the search.
+
+Here is the modified code:
+
+def depth_first_search(startnode, goalnode):
+    nodesvisited = set([startnode])
+
+    def search_from(node):
+        if node is goalnode:
+            return True
+        else:
+            return any(
+                search_from(nextnode) for nextnode in node.successors
+                if nextnode not in nodesvisited
+            )
+
+    return search_from(startnode)

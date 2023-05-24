@@ -1,0 +1,10 @@
+Yes, this program has a bug. When the function is called recursively with the rest of the coins, it should use the rest variable instead of coins. Here's the corrected code:
+
+def possible_change(coins, total):
+    if total == 0:
+        return 1
+    if total < 0:
+        return 0
+
+    first, *rest = coins
+    return possible_change(rest, total) + possible_change(coins, total - first)

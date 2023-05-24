@@ -1,0 +1,1 @@
+There is no bug in this program. It is a function that takes a number and a base as input and returns the number in that base as a string.

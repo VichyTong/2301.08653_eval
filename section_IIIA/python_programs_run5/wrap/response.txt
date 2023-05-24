@@ -1,0 +1,16 @@
+It is difficult to determine if the program has a bug without knowing the intended behavior and expected output. However, one potential issue is that if the length of the text is less than or equal to the specified column width, the while loop will not execute and the function will not return anything. To fix this, you can add an additional line to append the remaining text to the lines list:
+
+```
+def wrap(text, cols):
+    lines = []
+    while len(text) > cols:
+        end = text.rfind(' ', 0, cols + 1)
+        if end == -1:
+            end = cols
+        line, text = text[:end], text[end:]
+        lines.append(line)
+    lines.append(text) # append remaining text to lines list
+    return lines
+``` 
+
+This will ensure that all of the text is properly wrapped and returned in a list of lines.

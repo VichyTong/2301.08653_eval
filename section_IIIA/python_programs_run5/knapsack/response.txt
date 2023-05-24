@@ -1,0 +1,3 @@
+The program does not have a syntax error or logical error, but there is a bug in the condition `if weight < j:`. It should be `if weight <= j:` to include cases where the weight of an item is equal to the remaining capacity of the knapsack.
+
+To fix it, change the condition to `if weight <= j:`.

@@ -1,0 +1,11 @@
+There is no syntax error in this program, but there is a logical error. The while loop condition should be based on the difference between the square of the approximation and the original number x, not the difference between x and the approximation. 
+
+Here is the corrected code:
+
+def sqrt(x, epsilon):
+    approx = x / 2
+    while abs(x - approx**2) > epsilon:
+        approx = 0.5 * (approx + x / approx)
+    return approx
+
+This code will calculate the square root of x with the given epsilon value.

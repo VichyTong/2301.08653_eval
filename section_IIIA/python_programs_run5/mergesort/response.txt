@@ -1,0 +1,1 @@
+There is no bug in this program. It is a correct implementation of the merge sort algorithm.

@@ -1,0 +1,3 @@
+It is difficult to determine if this program has a bug without knowing the specific implementation of the Node class and its attributes. However, one potential issue could be that the program does not handle cycles in the graph, which can cause an infinite loop. 
+
+To fix this, you can implement a cycle detection algorithm such as depth-first search (DFS) or breadth-first search (BFS) to check for cycles before performing the topological ordering. Another potential issue could be that the program does not handle disconnected graphs, where there are multiple subgraphs that are not connected to each other. In this case, you may need to modify the program to perform the topological ordering on each subgraph separately.

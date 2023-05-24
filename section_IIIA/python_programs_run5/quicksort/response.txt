@@ -1,0 +1,13 @@
+No, this program does not have a bug.
+
+It is a recursive implementation of the quicksort algorithm, which sorts an array by selecting a pivot element and partitioning the array into two sub-arrays, one containing elements less than the pivot and the other containing elements greater than the pivot. The algorithm then recursively sorts the sub-arrays.
+
+To use this program, simply call the quicksort function with an array as its argument. For example:
+
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+sorted_arr = quicksort(arr)
+print(sorted_arr)
+
+This will output the sorted array:
+
+[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]

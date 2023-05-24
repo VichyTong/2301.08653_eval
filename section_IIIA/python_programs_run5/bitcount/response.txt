@@ -1,0 +1,10 @@
+It is not clear what the intended behavior of this program is, so it is difficult to determine if it has a bug. However, one possible issue is that the function does not handle negative input values. To fix this, you could add a check at the beginning of the function to ensure that n is non-negative:
+
+def bitcount(n):
+    if n < 0:
+        raise ValueError("Input must be non-negative")
+    count = 0
+    while n:
+        n ^= n - 1
+        count += 1
+    return count

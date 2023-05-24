@@ -1,0 +1,1 @@
+There does not appear to be a bug in this program. However, it is missing the definition of the Node class and its successors attribute, which may cause errors when running the program. To fix this, the Node class and its successors attribute should be defined before running the breadth_first_search function.

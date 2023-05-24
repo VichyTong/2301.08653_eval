@@ -1,0 +1,1 @@
+It is difficult to determine if this program has a bug without knowing the intended functionality and expected output. However, one potential issue is that the upper bound of the search range is set to len(arr) instead of len(arr) - 1, which could cause an index out of range error. To fix this, change the line "hi = len(arr)" to "hi = len(arr) - 1".

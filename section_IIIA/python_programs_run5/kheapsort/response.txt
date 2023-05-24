@@ -1,0 +1,1 @@
+There does not appear to be a bug in this program. It is a valid implementation of k-heap sort using the heapq module in Python.

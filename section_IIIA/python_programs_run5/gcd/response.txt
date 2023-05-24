@@ -1,0 +1,9 @@
+No, this program does not have a bug.
+
+It is a recursive function that calculates the greatest common divisor (GCD) of two numbers using the Euclidean algorithm. The function works by repeatedly dividing the larger number by the smaller number until the remainder is zero. The last non-zero remainder is the GCD.
+
+To use the function, simply call it with two integers as arguments:
+
+gcd(12, 8) # returns 4
+
+If you encounter any issues with the function, make sure that you are passing in valid integer values and that the values are not too large to cause a stack overflow.
